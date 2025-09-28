@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Energy Monitoring Dashboard</title>
+  <link rel="stylesheet" href="junction.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Energy Monitoring Dashboard</h1>
+  </header>
+
+  <section class="card">
+    <h2>Wind Turbine Chart</h2>
+    <div class="chart-controls">
+      <label for="chartType">View:</label>
+      <select id="chartType">
+        <option value="time">Output Over Time</option>
+        <option value="scatter">Output vs Wind Speed</option>
+      </select>
+    </div>
+    <canvas id="energyChart" height="100"></canvas>
+  </section>
+
+    <section class="card">
+      <h2>>Wind Turbine Monitoring Dashboard</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Device</th>
+            <th>Output (kW)</th>
+            <th>Temperature (°C)</th>
+            <th>Wind Speed (m/s)</th>
+            <th>Position</th>
+            <th>Timestamp</th>
+          </tr>
+        </thead>
+        <tbody id="energyTableBody">
+          <!-- Populated via JS -->
+        </tbody>
+      </table>      
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Energy Monitor Inc.
+  </footer>
+
+  <script src="junction.js"></script>
+</body>
+</html>
